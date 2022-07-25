@@ -24,12 +24,24 @@ function shuffleArray(){
 }
 shuffleArray()
 
-export default function QuestionOpen({index}){
+export default function QuestionOpen({index, GetAnswer1, setGetAnswer1, GetAnswer2, GetAnswer3, GetAnswer4, setGetAnswer2, setGetAnswer3, setGetAnswer4}){
+    function getAnswer({index}){
+        if(index === '1'){
+            setGetAnswer1(!GetAnswer1)
+        }else if(index === '2'){
+            setGetAnswer2(!GetAnswer2)
+        }else if(index === '3'){
+            setGetAnswer3(!GetAnswer3)
+        }else if(index === '4'){
+            setGetAnswer4(!GetAnswer4)
+        }
+    }
+
     return(
         <>
             <div className='questionOpen'>
                 <p>{flashcardsGame[index].question}</p>
-                <img src={setinha} alt='setinha'/>
+                <img src={setinha} alt='setinha' onClick={() => getAnswer({index})}/>
             </div>
         </>
     )

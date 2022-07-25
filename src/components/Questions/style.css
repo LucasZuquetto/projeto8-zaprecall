@@ -17,6 +17,9 @@
     font-size: 16px;
     color: #333333;
 }
+.questionClosed ion-icon{
+    cursor: pointer;
+}
 .questionsList{
     width: 100vw;
     display: flex;
@@ -42,4 +45,15 @@
     bottom: 10px;
     width: 30px;
     height: 20px;
+    cursor: pointer;
+}
+.answer{
+    width: 299px;
+    height: 131px;
+    box-sizing: border-box;
+    background-color: #FFFFD4;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
 }
